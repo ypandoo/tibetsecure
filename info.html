@@ -23,67 +23,175 @@
       font-size: 14px;
     }
 
-.btn {
-    width: 90%;
-    margin-right: 10%;
-    margin-bottom: 20px;
-}
+    .btn {
+      width: 90%;
+      margin-right: 10%;
+      margin-bottom: 20px;
+    }
 
-.alert-primary {
-    color: #326eaf !important;
-    background-color: rgba(204, 229, 255, 0)  !important;
-    border-color: rgba(204, 229, 255, 0)   !important;
-    width: 100%;
-}
+    .alert-primary {
+      color: #326eaf !important;
+      background-color: rgba(204, 229, 255, 0) !important;
+      border-color: rgba(204, 229, 255, 0) !important;
+      width: 100%;
+    }
 
-i{
-  margin-right:10px;
-}
+    i {
+      margin-right: 10px;
+    }
   </style>
   <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.css" rel="stylesheet" type="text/css"/>
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.css" rel="stylesheet" type="text/css"
+  />
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=mwzogZZGptZWIaKK32eOeydWTPDmdASl"></script>
   <script type="text/javascript" src="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.js"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+  <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
   <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
   <title>给多个点添加信息窗口</title>
 </head>
 
 <body>
+  <header class="main-header absolute">
+    <div class="upper-area">
+      <div class="wrapper g">
+        <ul class="gi log-area">
+
+
+
+
+
+
+        </ul>
+        <ul class="gi menu-lang">
+
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-area">
+      <div class="wrapper">
+        <a class="js-open-menu" href="#">
+          <i class="js-open-menu-bar"></i>
+        </a>
+        <div class="logo logo-extend">
+          <a href="http://www.oppo.com/cn/" class="oppo-tj" data-tj="www|a|logo|home">
+            <h1>
+              <img src="https://shopfs.myoppo.com/cn/media/images/logo.svg" alt="OPPO">
+            </h1>
+          </a>
+        </div>
+        <a class="js-open-user" href="#">
+          <img src="https://shopfs.myoppo.com/cn/media/images/icon-menu-user.png" alt="">
+        </a>
+        <div class="main-menu" style="display: none;">
+          <div class="search"></div>
+          <nav>
+            <div class="nav-ul-view">
+              <ul class="menu g">
+                <li class="gi
+          is-active
+          ">
+                  <a class="m-item" href="//www.oppo.com/cn">
+                    <span>首页</span>
+                  </a>
+                </li>
+                <li class="gi
+          ">
+                  <a class="m-item" href="http://www.oppo.com/cn/products.html">
+                    <span>产品</span>
+                  </a>
+                </li>
+                <li class="gi">
+                  <a class="m-item" id="storeLink" href="//www.opposhop.cn" data-hd-url="//hd.oppo.com/act/2016/1001/index.html">
+                    <span>商城</span>
+                  </a>
+                </li>
+                <li class="gi
+          ">
+                  <a class="m-item" href="http://www.oppo.com/cn/shops">
+                    <span>体验店</span>
+                  </a>
+                </li>
+
+                <li class="gi gi-language" data-desktop=".menu-lang" data-mobile=".main-menu nav .nav-ul-view > ul">
+                  <a class="lang-link js-toggle-close" href="#">Global</a>
+
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="user-menu">
+          <div class="relative">
+            <ul>
+              <li class="user-menu-login">
+                <a href="//www.opposhop.cn/orders">我的订单</a>
+              </li>
+              <li class="user-menu-login">
+                <a href="//www.opposhop.cn/user/addresses">配送地址</a>
+              </li>
+              <li class="user-menu-login">
+                <a href="//www.opposhop.cn/coupons/show">优惠券</a>
+              </li>
+              <li class="user-menu-login user-menu-message">
+                <a href="https://id.oppo.com/account/profile?callback=%2F%2Fwww.opposhop.cn">账户信息</a>
+              </li>
+              <li class="user-menu-login user-menu-cart">
+                <a href="//www.opposhop.cn/cart">购物车</a>
+              </li>
+              <li class="user-menu-login user-menu-toLogin">
+                <a class="sso-login" href="javascript:void(0)">
+                  登录
+                </a>
+              </li>
+              <li class="user-menu-logout">
+                <a class="sso-logout" href="javascript:void(0)">退出</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-sub-menu">
+      <div class="relative"></div>
+    </div>
+
+  </header>
+
+
   <div id="allmap"></div>
   <div class="container">
 
 
-    <nav aria-label="breadcrumb" role="navigation" style="margin-top:20px">
+    <!-- <nav aria-label="breadcrumb" role="navigation" style="margin-top:20px">
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="#">主页</a>
         </li>
         <li class="breadcrumb-item active" aria-current="page">道路全景</li>
+        <li class="breadcrumb-item " aria-current="page">遇险自助</li>
+        <li class="breadcrumb-item " aria-current="page">政务互动</li>
       </ol>
-    </nav>
+    </nav> -->
 
-        <div class="row">
+    <!-- <div class="row">
           <div class="alert alert-primary" role="alert">
             <i class="fa fa-map-marker" aria-hidden="true"></i>您目前所在位置：(10.900, 10.999)
           </div>
-        </div>
+        </div> -->
+    <div class="row">路线信息</div>
 
     <div class="row">
-      <div class="col">
-        <div class="btn btn-outline-primary">警务站信息</div>
-      </div>
-      <div class="col">
-        <div class="btn btn-outline-primary">景点信息</div>
-      </div>
-      <div class="col">
-        <div class="btn btn-outline-primary">检查站信息</div>
-      </div>      
+      <div class="route-info"></div>
+      <div class="route-info"></div>
+      <div class="route-info"></div>
     </div>
 
     <div class="row">
       <div class="col">
-        <div class="btn btn-outline-primary">危险路段</div>
+        <div class="btn btn-outline-primary" onclick="showRoute('G109')">青藏线(G109)</div>
       </div>
       <div class="col">
         <div class="btn btn-outline-primary">休息区</div>
@@ -92,55 +200,68 @@ i{
         <div class="btn btn-outline-primary">其他信息</div>
       </div>
     </div>
-    
+
   </div>
 </body>
 
 </html>
+
+<script type="text/javascript" src="routes.js"></script>
 <script type="text/javascript">
-  // 百度地图API功能	
+  //Map default setting, default location = lasa
   map = new BMap.Map("allmap");
-  map.centerAndZoom(new BMap.Point(116.417854, 39.921988), 15);
-  var data_info = [[116.417854, 39.921988, "地址：北京市东城区正义路甲5号<br>电话：18000000000 <br>值班民警:"],
-  [116.406605, 39.921585, "地址：北京市东城区正义路甲5号<br>电话：18000000000 <br>值班民警:"],
-  [116.412222, 39.912345, "地址：北京市东城区正义路甲5号<br>电话：18000000000 <br>值班民警:"]
-  ];
-  var opts = {
-    width: 250,     // 信息窗口宽度
-    height: 80,     // 信息窗口高度
-    title: "警务站信息", // 信息窗口标题
-    enableMessage: true//设置允许信息窗发送短息
-  };
-  for (var i = 0; i < data_info.length; i++) {
-    var marker = new BMap.Marker(new BMap.Point(data_info[i][0], data_info[i][1]));  // 创建标注
-    var content = data_info[i][2];
-    map.addOverlay(marker);               // 将标注添加到地图中
-    addClickHandler(content, marker);
-  }
-  function addClickHandler(content, marker) {
-    marker.addEventListener("click", function (e) {
-      openInfo(content, e)
-    }
-    );
-  }
-  function openInfo(content, e) {
-    var p = e.target;
-    var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
-    var infoWindow = new BMap.InfoWindow(content, opts);  // 创建信息窗口对象 
-    map.openInfoWindow(infoWindow, point); //开启信息窗口
-  }
+  map.centerAndZoom('拉萨', 13);
 
+
+  //Trafic layer
   var ctrl = new BMapLib.TrafficControl({
-      showPanel: false //是否显示路况提示面板
-    });
-    map.addControl(ctrl);
-    ctrl.setAnchor(BMAP_ANCHOR_BOTTOM_RIGHT);  
+    showPanel: false //是否显示路况提示面板
+  });
+  map.addControl(ctrl);
+  ctrl.setAnchor(BMAP_ANCHOR_BOTTOM_RIGHT);
 
-  var top_left_control = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_TOP_LEFT });// 左上角，添加比例尺
-  var top_left_navigation = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT });  //左上角，添加默认缩放平移控件
+  //Navigator
+  var top_left_control = new BMap.ScaleControl({
+    anchor: BMAP_ANCHOR_TOP_LEFT
+  }); // 左上角，添加比例尺
+  var top_left_navigation = new BMap.NavigationControl({
+    anchor: BMAP_ANCHOR_TOP_LEFT
+  }); //左上角，添加默认缩放平移控件
   map.addControl(top_left_control);
-  map.addControl(top_left_navigation); 
+  map.addControl(top_left_navigation);
 
 
+  //Click show route
+  function showRoute(route) {
+    var myP1 = new BMap.Point(Routes[route].StartPt.latitude, Routes[route].StartPt.longtitude); //起点
+    var myP2 = new BMap.Point(Routes[route].EndPt.latitude, Routes[route].EndPt.longtitude); //终点
+    var driving = new BMap.DrivingRoute(map, {
+      renderOptions: {
+        map: map,
+        autoViewport: true
+      }
+    }); //驾车实例
+    driving.search('格尔木', '拉萨'); //显示一条线路
 
+    //set markers
+    Routes[route].Markers.forEach(function (element) {
+      var marker = new BMap.Marker(new BMap.Point(element.latitude, element.longtitude)); //创建marker对象
+      marker.setTitle(element.title);
+      marker.setLabel()
+      marker.addEventListener("click", function (e) {
+        //console.log(e);
+        var opts = {
+          // width: 100,     // 信息窗口宽度
+          // height: 50,     // 信息窗口高度
+          title: element.title, // 信息窗口标题
+          enableMessage: true, //设置允许信息窗发送短息
+          message: 'test'
+        }
+        var infoWindow = new BMap.InfoWindow(element.description, opts); // 创建信息窗口对象 
+        this.openInfoWindow(infoWindow);
+      })
+      map.addOverlay(marker); //在地图中添加marker
+    }, this);
+
+  }
 </script>
