@@ -7062,9 +7062,9 @@ label.error {
   max-width: 300px;
   padding: 20px;
 }
-.specs-bottom .button .icon, .specs-bottom .button .navigation-filters .filter-name:after, .navigation-filters .specs-bottom .button .filter-name:after {
+/* .specs-bottom .button .icon, .specs-bottom .button .navigation-filters .filter-name:after, .navigation-filters .specs-bottom .button .filter-name:after {
   margin-right: 5px;
-}
+} */
 
 .top-icon .icon, .top-icon .navigation-filters .filter-name:after, .navigation-filters .top-icon .filter-name:after {
   background-position: -174px -233px;
