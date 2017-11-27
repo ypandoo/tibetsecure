@@ -13218,7 +13218,7 @@ input[type=text].activation_code {
     content: '';
     height: 3px;
     width: 20px;
-    background: #1f8657;
+    background: #007bff;
     -webkit-border-radius: 3px;
     overflow: hidden;
     position: absolute;
@@ -13305,7 +13305,7 @@ input[type=text].activation_code {
     height: 60px;
     overflow: hidden;
     position: relative;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.98);
   }
   .main-header .main-menu nav .nav-ul-view {
     display: inline-block;
@@ -13340,7 +13340,7 @@ input[type=text].activation_code {
     display: inline-block;
   }
   .main-header .main-menu nav ul.menu li.gi a {
-    color: #1f8657;
+    color: #03A9F4;
     border-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
@@ -13350,7 +13350,7 @@ input[type=text].activation_code {
     display: none;
   }
   .main-header .main-menu nav ul.menu li.gi.is-active a {
-    color: #66c397;
+    color: #03A9F4;
   }
 }
 .main-header .user-menu {

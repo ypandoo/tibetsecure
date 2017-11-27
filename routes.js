@@ -1,9 +1,40 @@
 var Routes = {
-  'G109':{
-            'StartPt': { "latitude": 94.967877, "longtitude": 36.385471},
-            'EndPt': { "latitude": 90.8578, "longtitude": 29.721328 },
-            'ZoomPt': { "latitude": 91.091126, "longtitude": 30.08676 },
-            'Markers': [{ 'title': '西大滩', 'description': '西大滩乡位于天祝藏族自治县北部毛毛山北麓，东邻东大滩乡，西连朵什乡，南与华藏寺镇毗邻，北与古浪县接壤，面积187平方千米', 'distance': '3000', "latitude": 94.312966, "longtitude": 35.748759},
-              { 'title': '沱沱河', 'description': '沱沱河介绍', 'distance': '3000', "latitude": 92.458791, "longtitude": 34.234271}]
-          }
+  'qingzang':{
+            'startCity': '格尔木',
+            'endCity': '拉萨',
+            'waypointsName': [],
+            'danger':{
+              'point': new BMap.Point(92.450124, 34.221988),
+              'info': '此路段为危险路段，请小心行使'
+            }
+          },
+  'chuanzangnan':{
+        'startCity': '成都',
+        'endCity': '拉萨',
+        'waypointsName': ['康定', '林芝'],
+        'danger': {
+          'point': new BMap.Point(101.967142, 30.047028),
+            'info': '此路段为危险路段，请小心行使'
+        }
+          },
+  'chuanzangbei': {
+      'startCity': '成都',
+      'endCity': '拉萨',
+      'waypointsName':['都江堰', '甘孜', '昌都', '那曲'],
+      'danger': {
+        'point': new BMap.Point(100.744109, 31.884309),
+          'info': '此路段为危险路段，请小心行使'
+      }
+    },
+  'xinzang': {
+    'startCity': '喀什',
+    'endCity': '拉萨',
+    'waypointsName': [], 
+    'danger': {
+      'point': new BMap.Point(77.476215, 37.882995),
+        'info': '此路段为危险路段，请小心行使'
+    }
+  },
+    
+
 }
