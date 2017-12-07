@@ -412,7 +412,7 @@ img {
     padding: 10px 15px;
     width: 102px;
     height: 27px;
-    background: url("/mobile/images/header/logo204.png") 15px 12px no-repeat;
+    background: url("../img/home.png") 20px 20px no-repeat;
     background-size: 102px
 }
 
