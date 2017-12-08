@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>投诉建议</title>
+<meta name="keywords" content="投诉建议" />
+<meta name="description" content="投诉建议" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<link rel="stylesheet" type="text/css" href="css/site_base.css"/>
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/header.css"/>
+
+
+<style>
+    		.name {
+			border: 1px solid #ff9d00;
+			padding: 5px 30px;
+			border-radius: 20px;
+			font-size: 12px;
+		}
+		/* .slider-item img{
+			height:55vh;
+		} */
+
+		dt {
+			line-height: 40px;
+		}
+
+		.ui-section-wrapper {
+    background-color: #fff;
+}
+
+.z-wolrd {
+    border-bottom: 1px solid #e6e8ea;
+}
+
+.zworld-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/* .zworld-items .zc-flex.zc-item01 {
+    background-image: url(img/icon/tel-2.png);
+    background-size: 75px 55px;
+}
+
+.zworld-items .zc-flex.zc-item02 {
+    background-image: url(img/icon/tel-2.png);
+    background-size: 55px 58px;
+}
+.zworld-items .zc-flex.zc-item03 {
+    background-image: url(img/icon/tel-2.png);
+    background-size: 50px 60px;
+}
+
+.zworld-items .zc-flex.zc-item04 {
+    background-image: url(img/icon/tel-2.png);
+    background-size: 65px 55px;
+} */
+
+.zworld-items .zc-flex:nth-child(odd) {
+    border-left-width: 0;
+}
+
+.zworld-items .zc-flex {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    width: 50%;
+    height: 80px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-width: 1px 0 0 1px;
+    border-style: solid;
+    border-color: #e6e8ea;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+.zworld-items .zc-flex.zc-item01 h3 {
+    color: #5dcce7;
+}
+
+.zworld-items .zc-flex h3 {
+    padding: 12px 0 6px 8px;
+    font-size: 16px;
+    /* color: #fb9388; */
+    color: #5dcce7;
+    line-height: 16px;
+}
+/* .zworld-items .zc-flex.zc-item03 h3 {
+    color: #ffbd56;
+}
+
+.zworld-items .zc-flex.zc-item04 h3 {
+    color: #25d9b2;
+} */
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+.zworld-items .zc-flex p {
+    padding-left: 8px;
+    color: #ced1d5;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+p, h3{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    line-height: 18px;
+}
+
+a:focus, a:hover {
+    /* color: #23527c; */
+    text-decoration: none !important;
+}
+
+</style>
+
+</head>
+<body ms-controller="wechat">
+
+  	<header style="    height: 50px;
+    background-size: 5px;
+    position: relative;">
+        <a onclick="showMenu()">
+          <img src="img/home.png" alt="" class="src" style="    width: 30px; margin:10px">
+        </a>
+      </header>
+    
+      <div class="menu" id='menu' style="display:none">
+        <ul class="menu-container">
+          <li class="menu-item"><a href="routes.html">道路全景</a></li>
+          <li class="menu-item"><a href="rescue.html">遇险救助</a></li>
+          <li class="menu-item"><a href="affairs.html">政务互动</a></li>
+        </ul>
+      </div>
+
+
+<section class="banner">
+    <img src="img/banner/gwjz.jpg" />
+</section>
+
+<!-- <div style="margin: 20px 3% 0px 3%;
+    text-align: left;
+    padding: 2% 4%;
+    border-left: 2px solid #23527c;
+    background: rgba(35, 82, 124, 0.06);
+    border-radius: 5px;">
+  友情提示：点击电话号码即可拨号。
+</div> -->
+
+
+
+
+<!-- <div style="overflow:hidden; width:100%">
+  <div style="    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+    text-align: center;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgba(238,238,238,0.2);
+    margin-top:20px" ms-for="el in data">
+    <img ms-attr="{src:'img/wechat/'+el.abbr+'.jpg'}" alt="" width="90%"  >
+    <p>{{el.name}}</p>
+  </div> -->
+  <section class="ui-section-wrapper z-wolrd">
+		<div class="ui-section-body">
+			<div class="zworld-items">
+				<div class="zc-flex zc-item01">
+					<a href="tel:18666666666" data-bn-ipg="mindex-z-nav-package">
+                        <h3>拉萨急救中心</h3>
+                        <p>88888888</p>
+						<p>西藏拉萨XXX街道</p>
+					</a>
+				</div>
+				<div class="zc-flex zc-item02">
+                        <a href="tel:18666666666" data-bn-ipg="mindex-z-nav-package">
+                                <h3>西藏人民医院</h3>
+                                <p>88888888</p>
+                                <p>西藏拉萨XXX街道</p>
+                            </a>
+				</div>
+				<div class="zc-flex zc-item03">
+                        <a href="tel:18666666666" data-bn-ipg="mindex-z-nav-package">
+                                <h3>社区救助站</h3>
+                                <p>88888888</p>
+                                <p>西藏拉萨XXX街道</p>
+                            </a>
+				</div>
+				<div class="zc-flex zc-item04">
+                        <a href="tel:18666666666" data-bn-ipg="mindex-z-nav-package">
+                                <h3>急救中心</h3>
+                                <p>88888888</p>
+                                <p>西藏拉萨XXX街道</p>
+                            </a>
+				</div>
+			</div>
+		</div>
+    </section>
+    
+
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/base.js"></script>
+<script type="text/javascript" src="js/site_base.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script src="http://cdn.bootcss.com/avalon.js/2.2.0/avalon.min.js"></script>
+<script>
+//avalon controllers
+// (function(){
+
+//    var self = this;
+//    var wechats = [
+//      {name:'错那在线', abbr:'cnzx'},
+//      {name:'秘境洛扎', abbr:'mjlz'},
+//      {name:'贡嘎', abbr:'gg'},
+//      {name:'网信措美', abbr:'wxcm'},
+//      {name:'网信加查', abbr:'wxjc'},
+//      {name:'网信乃东', abbr:'wxnd'},
+//      {name:'网信琼结', abbr:'wxqj'},
+//      {name:'网信曲松', abbr:'wxqs'},
+//      {name:'网信桑日', abbr:'wxsr'},
+//      {name:'幸福隆子', abbr:'xflz'},
+//      {name:'羊湖之声', abbr:'yhzs'},
+//      {name:'智慧扎囊', abbr:'zhzn'},
+//    ];
+//    self.content = avalon.define({
+//       $id: "wechat",
+//       data: wechats,
+//     });
+
+//   }).call(define('Controller'))
+  </script>
+
+</body>
+</html>

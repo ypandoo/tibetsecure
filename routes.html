@@ -20,6 +20,9 @@
 	<link rel="stylesheet" type="text/css" href="css/notes-list.css" />
 	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/ui.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<script src="js/header.js"></script>
+
 	<style>
 		.name{
 			border: 1px solid #ff9d00;
@@ -39,14 +42,20 @@
 </head>
 
 <body>
-	<div id="pos38"></div>
 	<header class="head2home">
-		<a href="/" class="logo"></a>
-		<div class="rBtn">
-			<!-- <a href="/" class="home">官网首页</a>
-			<a href="/search.php" class="sch"></a> -->
-		</div>
+		<a onclick="showMenu()">
+			<img src="img/home.png" alt="" class="src" style="    width: 30px;
+			padding: 10px;">
+		</a>
 	</header>
+
+	<div class="menu" id='menu' style="display:none">
+		<ul class="menu-container">
+			<li class="menu-item"><a href="routes.html">道路全景</a></li>
+			<li class="menu-item"><a href="rescue.html">遇险救助</a></li>
+			<li class="menu-item"><a href="affairs.html">政务互动</a></li>
+		</ul>
+	</div>
 
 	<div class="fs-wrapper" style="padding-bottom:30px">
 	<div class="fs-hd clearfix">
