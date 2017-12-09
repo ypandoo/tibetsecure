@@ -402,7 +402,7 @@ img {
 
 .head2home {
     height: 50px;
-    background: #fff url("/mobile/images/header/line1.png") 0 bottom repeat-x;
+    /* background: #fff url("/mobile/images/header/line1.png") 0 bottom repeat-x; */
     background-size: 5px;
     position: relative
 }
@@ -456,7 +456,7 @@ img {
 .omcToAppBar {
     display: block;
     height: 74px;
-    background: #fff url("/mobile/images/header/line1.png") 0 bottom repeat-x;
+    /* background: #fff url("/mobile/images/header/line1.png") 0 bottom repeat-x; */
     background-size: 5px;
     position: relative
 }
@@ -510,7 +510,7 @@ img {
 .omcTopBar {
     display: block;
     height: 97px;
-    background: #fff url("/mobile/images/header/line1.png") 0 bottom repeat-x;
+    /* background: #fff url("/mobile/images/header/line1.png") 0 bottom repeat-x; */
     background-size: 5px;
     position: relative
 }

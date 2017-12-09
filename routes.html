@@ -12,7 +12,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="no" />
 
 	<script src="js/flexible.js"></script>
-	<script src="js/ui.js"></script>
+	<!-- <script src="js/ui.js"></script> -->
 	<script src="js/swiper-3.3.1.min.js"></script>
 	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
@@ -25,7 +25,8 @@
 
 	<style>
 		.name{
-			border: 1px solid #ff9d00;
+			/* border: 1px solid #ff9d00; */
+			border: 1px solid #3296db;
 			padding: 5px 30px;
 			border-radius: 20px;
 			font-size: 12px;
@@ -61,68 +62,71 @@
 	<div class="fs-hd clearfix">
             <span class="day">04</span>
             <span class="year-month"><em>2017</em><em>DEC</em></span>
-            <span class="text">道路全景</span>
+			<span class="text">拉萨</span>
+			<span class="text">25°</span>
+
+			<img src="img/3d_60/0.png" alt="" class="src" style="position: absolute;right: 0px;top: -20px;">
             <!-- <a class="fs-list-btn" href="/note/calendar.php"><i></i>历历<br>在目</a> -->
         </div>
 		<div class="slider" id="slider" style="height:100vh">
 			<div class="slider-group" style="height:70vh">
 				<div class="swiper-wrapper">
 					<div class="slider-item">
-						<a href="route_info?route=qingzang">
+						<a href="route_info.html?route=qingzang">
+							<img src="img/routes/6.jpg"
+							    width="100%" border="0">
+							<dl>
+								<dt>青藏线-G109</dt>
+								<dd>
+									<span class="name">查看路线信息</span>
+								</dd>
+							</dl>
+						</a>
+					</div>
+					<div class="slider-item">
+						<a href="route_info.html?route=chuanzangnan">
 							<img src="img/routes/1.jpg"
 							    width="100%" border="0">
 							<dl>
-								<dt>青藏线</dt>
+								<dt>川藏南线-G318</dt>
 								<dd>
-									<span class="name">查看线路</span>
+									<span class="name">查看路线信息</span>
 								</dd>
 							</dl>
 						</a>
 					</div>
 					<div class="slider-item">
-						<a href="route_info?route=chuanzangnan">
-							<img src="img/routes/2.jpg"
-							    width="100%" border="0">
-							<dl>
-								<dt>川藏南线</dt>
-								<dd>
-									<span class="name">查看线路</span>
-								</dd>
-							</dl>
-						</a>
-					</div>
-					<div class="slider-item">
-						<a href="route_info?route=chuanzangbei">
+						<a href="route_info.html?route=chuanzangbei">
 							<img src="img/routes/3.jpg"
 							    width="100%" border="0">
 							<dl>
-								<dt>川藏北线</dt>
+								<dt>川藏北线-G317</dt>
 								<dd>
-									<span class="name">查看线路</span>
+									<span class="name">查看路线信息</span>
 								</dd>
 							</dl>
 						</a>
 					</div>
 					<div class="slider-item">
-						<a href="route_info?route=xinzang">
+						<a href="route_info.html?route=xinzang">
 							<img src="img/routes/4.jpg"
 							    width="100%" border="0">
 							<dl>
-								<dt>新藏线</dt>
+								<dt>新藏线-G219</dt>
 								<dd>
-									<span class="name">查看线路</span>
+									<span class="name">查看路线信息</span>
 								</dd>
 							</dl>
 						</a>
 					</div>
 					<div class="slider-item">
-						<a href="route_info?route=xinzang">
+						<a href="route_info.html?route=xinzang">
 							<img src="img/routes/5.jpg"
 							    width="100%" border="0">
 							<dl>
 								<dt>滇藏线</dt>
 								<dd>
-									<span class="name">查看线路</span>
+									<span class="name">查看路线信息</span>
 								</dd>
 							</dl>
 						</a>
@@ -131,10 +135,10 @@
 			</div>
 			<div class="slider-thumbs">
 				<div data-key="0" class="active slider-active">
-					<img src="img/routes/1-thumb.jpg">
+					<img src="img/routes/6-thumb.jpg">
 				</div>
 				<div data-key="1">
-					<img src="img/routes/2-thumb.jpg">
+					<img src="img/routes/1-thumb.jpg">
 				</div>
 				<div data-key="2">
 					<img src="img/routes/3-thumb.jpg">

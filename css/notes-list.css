@@ -1,14 +1,19 @@
-.sizing,.notes-item .l-text {
+.sizing,
+.notes-item .l-text {
     box-sizing: border-box
 }
 
-.text-overflow,.slider-item dt,.notes-item .user,.notes-bz .title {
+.text-overflow,
+.slider-item dt,
+.notes-item .user,
+.notes-bz .title {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
 }
 
-.clearfix:after,.notes-item:after {
+.clearfix:after,
+.notes-item:after {
     content: '';
     display: table;
     clear: both;
@@ -25,7 +30,8 @@ body {
 
 .fs-wrapper {
     padding: .8rem .26667rem 0;
-    background: #309296 url(../img/fs-bg.png) no-repeat center top;
+    background: #3296db;
+    /* url(../img/fs-bg.png) no-repeat center top;*/
     position: relative;
     background-size: cover
 }
@@ -53,7 +59,7 @@ body {
     padding: 0 .13333rem;
     line-height: .66667rem;
     color: #fff;
-    text-shadow: 0 0 .08rem rgba(0,0,0,0.3);
+    text-shadow: 0 0 .08rem rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center
 }
@@ -66,7 +72,7 @@ body {
     width: .05333rem;
     height: .66667rem;
     background-color: #fff;
-    text-shadow: 0 0 .08rem 0 rgba(0,0,0,0.3)
+    text-shadow: 0 0 .08rem 0 rgba(0, 0, 0, 0.3)
 }
 
 .fs-hd .day {
@@ -81,7 +87,7 @@ body {
     width: .05333rem;
     height: .66667rem;
     background-color: #fff;
-    text-shadow: 0 0 .08rem 0 rgba(0,0,0,0.3)
+    text-shadow: 0 0 .08rem 0 rgba(0, 0, 0, 0.3)
 }
 
 .fs-hd .year-month {
@@ -130,7 +136,8 @@ body {
     margin-right: -.26667rem
 }
 
-.ui-slider-wheel,.ui-slider-group {
+.ui-slider-wheel,
+.ui-slider-group {
     height: 100%
 }
 
@@ -154,7 +161,7 @@ body {
     background-color: #fff;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 0 .2rem .04rem rgba(0,0,0,0.2)
+    box-shadow: 0 0 .2rem .04rem rgba(0, 0, 0, 0.2)
 }
 
 .slider-item img {
@@ -174,7 +181,8 @@ body {
 }
 
 .slider-item dd span {
-    color: #ff9d00
+    /* color: #ff9d00; */
+    color: #3296db;
 }
 
 .slider-item .name {
@@ -423,5 +431,6 @@ body {
 .swiper-wrapper {
     display: block !important
 }
+
 
 /*# sourceMappingURL=notes-list.css.map */

@@ -13,7 +13,7 @@
 
 	<script src="js/header.js"></script>
 	<script src="js/flexible.js"></script>
-	<script src="js/ui.js"></script>
+	<!-- <script src="js/ui.js"></script> -->
 	<script src="js/swiper-3.3.1.min.js"></script>
 	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
@@ -24,7 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="css/header.css" />
 	<style>
 		.name {
-			border: 1px solid #ff9d00;
+			border: 1px solid #5dcce7;
 			padding: 5px 30px;
 			border-radius: 20px;
 			font-size: 12px;
@@ -54,22 +54,24 @@
 }
 
 .zworld-items .zc-flex.zc-item01 {
-    background-image: url(//ssr.qyerstatic.com/fe_ssr_home/static/z-bg01.59241f72.svg);
+    background-image: url(img/rescue/1.svg);
     background-size: 75px 55px;
 }
 
 .zworld-items .zc-flex.zc-item02 {
-    background-image: url(//ssr.qyerstatic.com/fe_ssr_home/static/z-bg02.97520e88.svg);
-    background-size: 55px 58px;
+    background-image: url(img/rescue/2.svg);
+    background-size: 45px 58px;
 }
 .zworld-items .zc-flex.zc-item03 {
-    background-image: url(//ssr.qyerstatic.com/fe_ssr_home/static/z-bg03.d370a3ee.svg);
-    background-size: 50px 60px;
+    background-image: url(img/rescue/3.svg);
+		background-size: 60px 37px;
+		    background-position: 99% 80%;
 }
 
 .zworld-items .zc-flex.zc-item04 {
-    background-image: url(//ssr.qyerstatic.com/fe_ssr_home/static/z-bg04.3cffb8c0.svg);
-    background-size: 65px 55px;
+    background-image: url(img/rescue/4.svg);
+    background-size: 45px 30px;
+    background-position: 99% 70%;
 }
 
 .zworld-items .zc-flex:nth-child(odd) {
@@ -98,16 +100,16 @@
 .zworld-items .zc-flex h3 {
     padding: 12px 0 6px 8px;
     font-size: 16px;
-    color: #fb9388;
+    color: #5dcce7;
     line-height: 16px;
 }
-.zworld-items .zc-flex.zc-item03 h3 {
+/* .zworld-items .zc-flex.zc-item03 h3 {
     color: #ffbd56;
 }
 
 .zworld-items .zc-flex.zc-item04 h3 {
     color: #25d9b2;
-}
+} */
 
 h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
@@ -119,6 +121,11 @@ h1, h2, h3, h4, h5, h6 {
     color: #ced1d5;
     font-size: 12px;
     line-height: 12px;
+}
+
+.slider-item img {
+    height: 200px;
+    width: 100%;
 }
 
 
@@ -156,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 				<div class="swiper-wrapper">
 					<div class="slider-item">
 						<a href="route_info?route=qingzang">
-							<img src="img/routes/1.jpg" width="100%" border="0">
+							<img src="img/rescue/gaoyuan.jpg" width="100%" border="0">
 							<dl>
 								<dt>高反急救</dt>
 								<dd>
@@ -167,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 					</div>
 					<div class="slider-item">
 						<a href="route_info?route=chuanzangnan">
-							<img src="img/routes/2.jpg" width="100%" border="0">
+							<img src="img/rescue/yuxue.jpg" width="100%" border="0">
 							<dl>
 								<dt>雨雪驾车</dt>
 								<dd>
@@ -178,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
 					</div>
 					<div class="slider-item">
 						<a href="route_info?route=chuanzangbei">
-							<img src="img/routes/3.jpg" width="100%" border="0">
+							<img src="img/rescue/yiliao.jpg" width="100%" border="0">
 							<dl>
 								<dt>其它急救</dt>
 								<dd>
@@ -189,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 					</div>
 					<div class="slider-item">
 						<a href="route_info?route=xinzang">
-							<img src="img/routes/4.jpg" width="100%" border="0">
+							<img src="img/rescue/dianhua.jpg" width="100%" border="0">
 							<dl>
 								<dt>报警电话</dt>
 								<dd>
