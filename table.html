@@ -29,6 +29,19 @@
 </head>
 <body ms-controller="wechat">
 
+  <div id="layer" ms-visible="showTip" ms-click="check" 
+  style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:999;background:rgba(0,0,0,0.8);display:none;">
+    <img src="img\arrow.png" alt="" class="sr" style="    width: 50px;
+    position: absolute;
+    right: 10px;
+    top: 20px;">
+    <p style="font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 80px;
+    right: 20px;">因微信限制,请在系统浏览器中打开下载文件</p>
+  </div>
+
   	<header style="    height: 50px;
     background-size: 5px;
     position: relative;">
@@ -66,12 +79,12 @@
     border-left: 2px solid #3f91d8;
     background: rgba(35, 82, 124, 0.06);
     border-radius: 5px;">
-  友情提示：点击即可下载您需要的文件。
+  友情提示：因微信浏览器限制了下载功能,请在系统浏览器中打开下载。
 </div>
 
 
 <div style="overflow:hidden; width:100%">
-  <div class="item" ms-for="el in data">
+  <div class="item" ms-for="el in data" ms-click="check">
     <a ms-attr="{href:el.addr}">
     <img src="img/affair/folder.png" alt="" width="30%"  >
     <p>{{el.name}}</p>
@@ -101,6 +114,18 @@
    self.content = avalon.define({
       $id: "wechat",
       data: wechats,
+      showTip : false,
+      check: function () {
+          if(Device.isWeixin())
+          {
+          if (this.showTip == false) {
+            this.showTip = true;
+          } else {
+            this.showTip = false;
+          }
+        }
+
+        }
     });
 
   }).call(define('Controller'))
