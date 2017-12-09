@@ -58,7 +58,7 @@ var prefix = (function () {
     return result;
   })();
 
-  function isWeixin(){
+  this.isWeixin = function(){
       var ua = navigator.userAgent.toLowerCase();
       if(ua.match(/MicroMessenger/i)=="micromessenger") {
           return true;
