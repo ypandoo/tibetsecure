@@ -104,7 +104,7 @@
             type:'POST',
             dataType: 'JSON',
             data:{page:self.content.page, category:self.content.type},
-            url:'http://www.vnewcd.com/tibetsecure-admin/content/getAPageByCategory/',
+            url:'http://www.vnewcd.com/tibetsecure-admin/index.php/content/getAPageByCategory/',
         })
         .done(function (results) {
             if (results.success == 1 && results.data.length > 0){
