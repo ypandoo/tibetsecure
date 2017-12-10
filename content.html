@@ -47,7 +47,7 @@
 
     <section class="content">
         <div class="firstNews" ms-for="($index,el) in data">
-            <a  ms-attr="{href:'http://www.vnewcd.com/tibetsecure-admin/index.php/front/content_detail.html?id='+el._id}" >
+            <a  ms-attr="{href:'http://www.vnewcd.com/tibetsecure/content_detail.html?id='+el._id}" >
                 <img ms-attr="{src:'http://www.vnewcd.com/tibetsecure-admin/files/'+el.cover}" />
                 <h4>{{el.title}}</h4>
                 <p>一{{el.plain_text | truncate(30,'...') }}</p>
