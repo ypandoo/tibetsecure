@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>西藏安监</title>
+<meta name="keywords" content="西藏安监" />
+<meta name="description" content="西藏安监" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<link rel="stylesheet" type="text/css" href="css/header.css" />
+<link rel="stylesheet" type="text/css" href="css/site_base.css"/>
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper" ms-controller="contents">
+
+            <header style="    height: 50px;
+                background-size: 5px;
+                position: relative;">
+                <a onclick="showMenu()">
+                    <img src="img/home.png" alt="" class="src" style="    width: 30px; margin:10px">
+                </a>
+            </header>
+            
+            <div class="menu" id='menu' style="display:none">
+                <ul class="menu-container">
+                    <li class="menu-item">
+                        <a href="routes.html">道路全景</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="rescue.html">遇险救助</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="affairs.html">政务互动</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        <!-- <section class="banner">
+            <img ms-attr="{src:'img/banner/'+ _type +'.jpg'}">
+        </section> -->
+
+        <section class="content">
+        	<hgroup class="newsTitel">
+                <h4> {{_title}}</h4>
+                <p>发布时间：{{_update_time}}</p>
+            </hgroup>
+            <div class="txtEdit">
+            	 <p ms-html="_html"></p>
+                 <p><br/></p>
+            </div>
+            <div class="newsOther">
+
+        	</div>
+        </section>
+
+    </div>
+</body>
+</html>
+<script src="js/base.js"></script>
+<script src="js/header.js"></script>
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/avalon.js/2.2.0/avalon.min.js"></script>
+<script src="js/jquery.query-object.js"></script>
+<script type="text/javascript" src="js/site_base.js"></script>
+<script>
+//avalon controllers
+(function(){
+ var self = this;
+ self.content = avalon.define({
+    $id: "contents",
+    _cover: "",
+    _title: "",
+    _update_time: "",
+    _id:"",
+    _pics:[],
+    _html:"",
+    _type:'1',
+    getContent:function(){
+        $.ajax({
+            type:'POST',
+            dataType: 'JSON',
+            url:'http://www.vnewcd.com/tibetsecure-admin/index.php/content/getById/'+id,
+        })
+        .done(function (results) {
+            if (results.success == 1){
+                self.content._title = results.data.title;
+                self.content._type = results.data.type;
+                self.content._cover = results.data.cover;
+                self.content._pics = results.data.pics.split(";");
+                self.content._update_time = results.data.update_time;
+                self.content._html = results.data.html;
+            }
+        })
+    },
+  });
+}).call(define('Controller'));
+
+//global
+var id = $.query.get('id');
+if(id != null && typeof(id) != 'undefined' && id != '')
+{
+  Controller.content.getContent();
+}
+else{
+    alert('数据获取不正确');
+    // window.location.href = '<?php echo site_url() ?>';
+}
+
+</script>
