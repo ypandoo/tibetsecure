@@ -35,6 +35,16 @@ var Routes = {
         'info': '此路段为危险路段，请小心行使'
     }
   },
+
+  'dianzang': {
+    'startCity': '喀什',
+    'endCity': '拉萨',
+    'waypointsName': [],
+    'danger': {
+      'point': new BMap.Point(77.476215, 37.882995),
+      'info': '此路段为危险路段，请小心行使'
+    }
+  },
     
 
 }
