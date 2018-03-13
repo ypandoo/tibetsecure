@@ -177,7 +177,7 @@ h1, h2, h3, h4, h5, h6 {
 
 <body ms-controller="wechat">
 
-  <div id="layer" ms-visible="showTip" ms-click="check" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:999;background:rgba(0,0,0,0.8);">
+  <!-- <div id="layer" ms-visible="showTip" ms-click="check" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:999;background:rgba(0,0,0,0.8);">
     <img src="img\arrow.png" alt="" class="sr" style="    width: 50px;
     position: absolute;
     right: 10px;
@@ -187,7 +187,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 80px;
     right: 20px;">重要提示：因微信限制,请在系统浏览器中打开下载文件</p>
-  </div>
+  </div> -->
 
   <header style="    height: 50px;
     background-size: 5px;
@@ -215,57 +215,41 @@ h1, h2, h3, h4, h5, h6 {
   </div>
 
 
-  <div style="background:url(img/affair/table.jpg); height:140px; width:100%; background-size:100% 100%">
+      <form style="padding:20px">
+          <div class="form-group">
+            <label for="corp">举报人单位</label>
+            <input type="text" class="form-control" id="corp" placeholder="举报人单位">
+          </div>
+          <div class="form-group">
+            <label for="email">电子邮箱</label>
+            <input type="email" class="form-control" id="email" placeholder="电子邮箱">
+          </div>
+          <div class="form-group">
+              <label for="title">标题</label>
+              <input type="text" class="form-control" id="title" placeholder="标题">
+            </div>
+          <div class="form-group">
+              <label for="title">分类</label>
+              <select class="form-control"  placeholder="请选择分类">
+                  <option>事故隐患</option>
+                  <option>事故举报</option>
+                  <option>违反党纪政纪</option>
+                  <option>违法开采</option>
+                  <option>安全生产</option>
+                </select>
+          </div>
 
-    <p style="    color: white;
-      font-size: 20px;
-      font-weight: 500;
-      padding-left: 30px;
-      padding-top: 40px;">在线表格</p>
-    <p style="    color: white;
-      font-size: 12px;
-      font-weight: 500;
-      padding: 0 30px;">方便您下载使用</p>
-  </div>
+          <div class="form-group">
+              <label for="content">举报内容</label>
+              <textarea class="form-control rounded-0" id="content" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-default">提交</button>
+        </form>
 
 
-  <div style="margin: 20px 3% 20px 3%;
-    text-align: left;
-    padding: 2% 4%;
-    border-left: 2px solid #3f91d8;
-    background: rgba(35, 82, 124, 0.06);
-    border-radius: 5px;">
-    友情提示：因微信浏览器限制了下载功能,请在系统浏览器中打开下载。
-  </div>
 
-
-  <!-- <div style="overflow:hidden; width:100%">
-    <div class="item" ms-for="el in data" ms-click="check(el)">
-      <!- <a ms-attr="{href:el.addr}"> 
-      <img src="img/affair/folder.png" alt="" width="30%">
-      <p>{{el.name}}</p>
-      <!- </a> 
-    </div>
-  </div> -->
-
-  <section class="ui-section-wrapper z-wolrd">
-		<div class="ui-section-body" style="overflow:hidden; " >
-      <div class="item item0"  ms-click="check('http://www.chinasafety.gov.cn/zwdt/xzfw/mk/')"  ><i class="fa fa-globe" aria-hidden="true"></i>煤矿</div>
-      <div class="item item1"  ms-click="check('http://www.chinasafety.gov.cn/zwdt/xzfw/wxhxp/')"  ><i class="fa fa-globe" aria-hidden="true"></i>危险化学品</div>
-      <div class="item item0"  ms-click="check('http://www.chinasafety.gov.cn/zwdt/xzfw/yhbz/')"  ><i class="fa fa-briefcase" aria-hidden="true"> </i>烟花爆竹</div>
-      <div class="item item1"  ms-click="check('http://www.chinasafety.gov.cn/zwdt/xzfw/fmks/')"  ><i class="fa fa-cubes" aria-hidden="true"></i>非煤矿山</div>
-      <div class="item item0"  ms-click="check('http://www.chinasafety.gov.cn/zwdt/xzfw/aqpj/')"  ><i class="fa fa-cubes" aria-hidden="true"></i>安全评价</div>
-      <div class="item item1"  ms-click="check('http://www.chinasafety.gov.cn/zwdt/xzfw/aqscjcjc/')"  ><i class="fa fa-flask" aria-hidden="true"></i>安全生产检测检验</div>
-      <div class="item item0"  ms-click="check('http://www.chinasafety.gov.cn/zwdt/xzfw/kjgl/')"  ><i class="fa fa-fire" aria-hidden="true"></i>科技管理</div>
-      <div class="item item1"  ms-click="check('http://www.chinasafety.gov.cn/zwdt/xzfw/aqpx/')"  ><i class="fa fa-road" aria-hidden="true"></i>安全培训</div>
-      <div class="item item0"  ms-click="check('http://www.chinasafety.gov.cn/zwdt/xzfw/zcaqgcs/')"  ><i class="fa fa-shield" aria-hidden="true"></i>注册安全工程师</div>
-      <div class="item item1"  ms-click="check('http://www.chinasafety.gov.cn/zwdt/xzfw/xzzfws/')"  ><i class="fa fa-shield" aria-hidden="true"></i>行政执法文书</div>
-      <div class="item item0"  ms-click="check('http://www.chinasafety.gov.cn/zwdt/xzfw/cwwj/')"    style="border-bottom:1px solid rgba(0,0,0,0.1)"><i class="fa fa-group" aria-hidden="true"></i>财务文件</div>
-      <div class="item item1"  ms-click="check('http://www.chinasafety.gov.cn/zwdt/xzfw/qt/')"    style="border-bottom:1px solid rgba(0,0,0,0.1)"><i class="fa fa-group" aria-hidden="true"></i>其他</div>
-		</div>
-  </section>
   
-+
   <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
   <script src="js/base.js"></script>
   <script type="text/javascript" src="js/site_base.js"></script>
