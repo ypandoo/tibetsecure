@@ -25,40 +25,41 @@
         </a>
     </header>
 
-  <div class="menu" id='menu' style="display:none">
-    <ul class="menu-container">
-      <li class="menu-item">
-        <a href="service.html">政务服务</a>
-      </li>
-      <li class="menu-item">
-        <a href="affairs.html">政务公开</a>
-      </li>
-      <li class="menu-item">
-        <a href="routes.html">道路全景</a>
-      </li>
-      <li class="menu-item">
-        <a href="rescue.html">遇险救助</a>
-      </li>
-    </ul>
-  </div>
-
-
-    <div style="background:url(img/banner/zhengjian.jpg); height:150px; width:100%; background-size:100% 100%">
-    
-      <p style="    color: white;
-        font-size: 20px;
-        font-weight: 500;
-        padding-left: 30px;
-        padding-top: 40px;">证件查询</p>
-      <p style="    color: white;
-        font-size: 12px;
-        font-weight: 300;
-        padding: 0 30px;">在线证件查询</p>
+    <div class="menu" id='menu' style="display:none">
+        <ul class="menu-container">
+            <li class="menu-item">
+                <a href="service.html">政务服务</a>
+            </li>
+            <li class="menu-item">
+                <a href="affairs.html">政务公开</a>
+            </li>
+            <li class="menu-item">
+                <a href="routes.html">道路全景</a>
+            </li>
+            <li class="menu-item">
+                <a href="rescue.html">遇险救助</a>
+            </li>
+        </ul>
     </div>
+
+
+    <section style="background:url(img/banner/area_news.jpg); height:150px; width:100%; background-size:100% 100%">
+            <p style="    color: white;
+            font-size: 20px;
+            font-weight: 500;
+            padding-left: 30px;
+            padding-top: 40px;">各地动态</p>
+          <p style="    color: white;
+            font-size: 12px;
+            font-weight: 300;
+            padding: 0 30px;">Local News</p>
+        <!-- <div class="banner-tilte"><h3>各地动态</h3><p>Local News</p> -->
+        <!-- <img ms-attr="{src: 'img/banner/'+type+'.jpg'}" /> -->
+    </section>
 
     <section class="content">
         <div class="firstNews" ms-for="($index,el) in data">
-            <a  ms-attr="{href:'http://www.vnewcd.com/tibetsecure/content_detail_zhengjian.html?id='+el._id}" >
+            <a  ms-attr="{href:'http://www.vnewcd.com/tibetsecure/content_detail.html?id='+el._id}" >
                 <img ms-attr="{src:'http://www.vnewcd.com/tibetsecure-admin/files/'+el.cover}" />
                 <h4>{{el.title}}</h4>
                 <p>一{{el.plain_text | truncate(30,'...') }}</p>
@@ -84,10 +85,11 @@
     	<a class='next' href="/wap/news.php?bid=2&page=2"  title="下一页" style="float:right">下一页</a>
     </div> -->
     </section>
-    <div id="loading" style=" position:fixed; bottom:200px; text-align:center;width:100%" ms-visible="@sending">
+    <div id="loading" style="position:fixed; bottom:200px; text-align:center;width:100%" ms-visible="@sending">
       <i class="fa fa-spinner fa-pulse fa-2x fa-fw" style="color:#337ab7"></i>
       <span class="sr-only">Loading...</span>
     </div>
+
 </div>
 
 </body>
