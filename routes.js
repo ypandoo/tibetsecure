@@ -27,8 +27,8 @@ var Routes = {
       }
     },
   'xinzang': {
-    'startCity': '喀什',
-    'endCity': '拉萨',
+    'startCity': '叶城县',
+    'endCity': '日喀则市',
     'waypointsName': [], 
     'danger': {
       'point': new BMap.Point(77.476215, 37.882995),

@@ -27,9 +27,9 @@ var Routes = {
       }
     },
   'xinzang': {
-    'startCity': '喀什',
+    'startCity': '叶城县',
     'endCity': '拉萨',
-    'waypointsName': [], 
+    'waypointsName': ['日喀则市'], 
     'danger': {
       'point': new BMap.Point(77.476215, 37.882995),
         'info': '此路段为危险路段，请小心行使'
@@ -37,9 +37,9 @@ var Routes = {
   },
 
   'dianzang': {
-    'startCity': '喀什',
+    'startCity': '昆明',
     'endCity': '拉萨',
-    'waypointsName': [],
+    'waypointsName': ['大理', '香格里拉', '林芝'],
     'danger': {
       'point': new BMap.Point(77.476215, 37.882995),
       'info': '此路段为危险路段，请小心行使'
