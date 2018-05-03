@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>政务服务</title>
+	<title>官网直通车</title>
 	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui,viewport-fit=cover"
 	/>
 	<meta name="format-detection" content="telephone=no,address=no" />
@@ -13,7 +13,6 @@
 
 	<script src="js/header.js"></script>
 	<script src="js/flexible.js"></script>
-	<!-- <script src="js/ui.js"></script> -->
 	<script src="js/swiper-3.3.1.min.js"></script>
 	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
@@ -21,7 +20,8 @@
 	<link rel="stylesheet" type="text/css" href="css/notes-list.css" />
 	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/ui.css" />
-	<link rel="stylesheet" type="text/css" href="css/header.css" />
+  <link rel="stylesheet" type="text/css" href="css/header.css" />
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 	<style>
 		.name {
 			border: 1px solid #ff9d00;
@@ -64,7 +64,7 @@
     background-position: 97% 80%;
 }
 .zworld-items .zc-flex.zc-item03 {
-    background-image: url(img/affair/info2.svg);
+    background-image: url(img/affair/wechat2.svg);
     background-size: 40px 30px;
     background-position: 95% 80%;
 }
@@ -87,7 +87,7 @@
     background-position: 97% 80%;
 }
 .zworld-items .zc-flex.zc-item07 {
-    background-image: url(img/affair/tel.svg);
+    background-image: url(img/affair/info2.svg);
     background-size: 30px 30px;
     background-position: 96% 80%;
 }
@@ -148,16 +148,36 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 12px;
 }
 
+.item{
+  width: 49.5%;
+  float: left;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  font-size: 14px;
+}
+
+.item i{
+  margin-right: 10px;
+  font-size: 20px;
+  color:#3296db;
+}
+
+.item0{
+  border-right:1px solid rgba(0, 0, 0, 0.1);
+}
 
 	</style>
 </head>
 
 <body>
-	<header class="head2home">
+	<header class="head2home" style="    border-bottom: 1px solid #eaeaea;">
 		<a onclick="showMenu()">
 			<img src="img/home.png" alt="" class="src" style="    width: 30px;
 			padding: 10px;">
-		</a>
+    </a>
+    
 	</header>
 
 	<div class="menu" id='menu' style="display:none">
@@ -177,155 +197,60 @@ h1, h2, h3, h4, h5, h6 {
 		</ul>
 	</div>
     
-    <div style="background:url(img/banner/zhengjian.jpg); height:150px; width:100%; background-size:100% 100%">
+    <!-- <div style="background:url(img/banner/law.jpg); height:150px; width:100%; background-size:100% 100%">
 		
 		<p style="    color: white;
     font-size: 20px;
     font-weight: 500;
     padding-left: 30px;
-    padding-top: 40px;">政务服务</p>
+    padding-top: 40px;">法律法规</p>
 		<p style="    color: white;
     font-size: 12px;
     font-weight: 300;
-    padding: 0 30px;">全心全意服务群众</p>
-    </div>
+    padding: 0 30px;">法律法规在线查询</p>
+    </div> -->
 
+    <!-- <p>官网直通车</p> -->
 
-	<section class="ui-section-wrapper z-wolrd">
-		<div class="ui-section-body">
-			<div class="zworld-items">
-				<div class="zc-flex zc-item01">
-					<a href="rule.html" data-bn-ipg="mindex-z-nav-package">
-						<h3>法律法规</h3>
-						<p>法律法规查询</p>
-					</a>
-				</div>
-				<div class="zc-flex zc-item02">
-					<a href="http://xz.122.gov.cn/views/inquiry.html" data-bn-ipg="mindex-z-nav-ticket">
-						<h3>违章查询</h3>
-						<p>在线违章查询</p>
-					</a>
-				</div>
-				<div class="zc-flex zc-item03" style=" border-width: 1px 0px 1px 0px;">
-					<a href="table.html" data-bn-ipg="mindex-z-nav-visa">
-						<h3>办事大厅</h3>
-						<p>在线办事大厅</p>
-					</a>
-				</div>
-				<!-- <div class="zc-flex zc-item04">
-					<a href="tel-police.html" data-bn-ipg="mindex-z-nav-citywalk">
-						<h3>报警电话</h3>
-						<!-- <p>快速救助热线</p> --
-					</a>
-                </div>
-                <div class="zc-flex zc-item05">
-					<a href="content.html?type=anquan" data-bn-ipg="mindex-z-nav-citywalk">
-						<h3>安全文化</h3>
-						<!-- <p>精神文明指南</p> --
-					</a>
-                </div> -->
-                <!-- <div class="zc-flex zc-item06" style="    border-width: 1px 0 1px 1px;">
-					<a href="construction.html" data-bn-ipg="mindex-z-nav-citywalk">
-						<h3>事故调查处理结果</h3>
-						<p>快速响应群众意见</p>
-					</a>
-                </div> -->
-                <div class="zc-flex zc-item07" style="    border-width: 1px 1px 1px 1px;">
-					<a href="12350.html" data-bn-ipg="mindex-z-nav-citywalk">
-						<h3>12350举报</h3>
-						<p>群众监督</p>
-					</a>
-                </div>
-                <!-- <div class="zc-flex zc-item08">
-					<a href="table.html" data-bn-ipg="mindex-z-nav-citywalk">
-						<h3>表格下载</h3>
-						<!-- <p>常用表格下载</p> --
-					</a>
-				</div> -->
-			</div>
+	<div class="ui-section-wrapper z-wolrd" id="app" ms-controller="app" style="margin-top: 20px; margin-bottom:40px; padding: 0 5%;">
+		<div class="ui-section-body" style="overflow:hidden; ">
+      <div  ms-for="el in data" style="padding: 10px;">
+        <!-- <p>{{el.name}}</p> -->
+        <a ms-attr="{href:el.addr}"><img ms-attr="{src:el.img}" alt="" width="100%" style="border: 1px solid #d6d6d6;
+          border-radius: 10px; "></a>
+      </div>
 		</div>
-	</section>
+  </div>
 
+  <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/base.js"></script>
+<script type="text/javascript" src="js/site_base.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script src="http://cdn.bootcss.com/avalon.js/2.2.0/avalon.min.js"></script>
 
 	<script type="text/javascript">
-		function GetDateStr(AddDayCount) {
-			var m;
-			var curDate = new Date();
-			curDate.setDate(curDate.getDate() + AddDayCount);
-			var y = curDate.getFullYear();
-			var month = curDate.getMonth() + 1;
-			var d = curDate.getDate();
-			switch (month) {
-				case 1:
-					m = "JAN";
-					break;
-				case 2:
-					m = "FED";
-					break;
-				case 3:
-					m = "MAR";
-					break;
-				case 4:
-					m = "APR";
-					break;
-				case 5:
-					m = 'MAY';
-					break;
-				case 6:
-					m = "JUN";
-					break;
-				case 7:
-					m = "JUL";
-					break;
-				case 8:
-					m = "AUG";
-					break;
-				case 9:
-					m = "SEP";
-					break;
-				case 10:
-					m = "OCT";
-					break;
-				case 11:
-					m = "NOV";
-					break;
-				case 12:
-					m = "DEC";
-					break;
-			}
-			if (d < 10) {
-				d = "0" + d;
-			} else {
-				d = d;
-			}
-			return {
-				y: y,
-				m: m,
-				d: d
-			};
-		}
 
-		$(function () {
+(function(){
 
-			var galleryTop = new Swiper('.slider-group', {
-				autoplay: 5000,
-				slideClass: 'slider-item',
-				pagination: '.slider-thumbs',
-				paginationType: 'custom',
-				onInit: function () {
-					$('.year-month').html('<em>' + GetDateStr(0).y + '</em><em>' + GetDateStr(0).m + '</em>');
-					$('.day').html(GetDateStr(0).d);
-				},
-				onTransitionStart: function (swiper) {
-					$('.slider-thumbs div').removeClass('slider-active');
-					$('.slider-thumbs div').eq(swiper.activeIndex).addClass('slider-active');
-				}
-			});
-			$('.slider-thumbs div').click(function () {
-				var aIndex = $(this).index();
-				galleryTop.slideTo(aIndex);
-			});
-		});
+   var self = this;
+   var wechats = [
+     {name:'中国人民共和国应急管理部', img:'http://p84xxarlh.bkt.clouddn.com/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%BA%94%E6%80%A5%E7%AE%A1%E7%90%86%E9%83%A8.png', addr: 'http://www.chinasafety.gov.cn/'},
+     {name:'国务院安全生产委员会', img:'http://p84xxarlh.bkt.clouddn.com/%E5%9B%BD%E5%8A%A1%E9%99%A2%E5%AE%89%E5%85%A8%E7%94%9F%E4%BA%A7%E5%A7%94%E5%91%98%E4%BC%9A.png', addr: 'ttp://old.chinasafety.gov.cn/jgzn/awhsy/'},
+     {name:'国家煤矿安全监察局', img:'http://p84xxarlh.bkt.clouddn.com/%E5%9B%BD%E5%AE%B6%E7%85%A4%E7%9F%BF%E5%AE%89%E5%85%A8%E7%9B%91%E5%AF%9F%E5%B1%80.png', addr: 'http://www.chinacoal-safety.gov.cn/newpage/mkaj/'},
+     {name:'国家安全生产应急救援指挥中心', img:'http://p84xxarlh.bkt.clouddn.com/%E5%9B%BD%E5%AE%B6%E5%AE%89%E5%85%A8%E7%94%9F%E4%BA%A7%E5%BA%94%E6%80%A5%E6%95%91%E6%8F%B4%E6%8C%87%E6%8C%A5%E4%B8%AD%E5%BF%83.png', addr: 'http://www.emc.gov.cn/'},
+     {name:'国家减灾网', img:'http://p84xxarlh.bkt.clouddn.com/%E5%9B%BD%E5%AE%B6%E5%87%8F%E7%81%BE%E7%BD%91.png', addr: 'http://www.jianzai.gov.cn/DRpublish/'},
+     {name:'中国地震局 ', img:'http://p84xxarlh.bkt.clouddn.com/%E4%B8%AD%E5%9B%BD%E5%9C%B0%E9%9C%87%E5%B1%80.png', addr: 'http://www.cea.gov.cn/'},
+     {name:'中央纪委驻应急管理部纪检组', img:'http://p84xxarlh.bkt.clouddn.com/%E4%B8%AD%E5%A4%AE%E7%BA%AA%E5%A7%94%E9%A9%BB%E5%BA%94%E6%80%A5%E7%AE%A1%E7%90%86%E9%83%A8%E7%BA%AA%E6%A3%80%E7%BB%84.png', addr: ' http://old.chinasafety.gov.cn/jjz/'},
+     {name:'消防局', img:'http://p84xxarlh.bkt.clouddn.com/%E6%B6%88%E9%98%B2%E5%B1%80.png', addr: 'http://www.119.gov.cn/xiaofang/'},
+     {name:'原国家安全生产监督管理总局网站', img:'http://p84xxarlh.bkt.clouddn.com/%E5%8E%9F%E5%9B%BD%E5%AE%B6%E5%AE%89%E5%85%A8%E7%94%9F%E4%BA%A7%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E6%80%BB%E5%B1%80%E7%BD%91%E7%AB%99.png', addr: 'http://old.chinasafety.gov.cn/index.shtml'},
+
+   ];
+   self.content = avalon.define({
+      $id: "app",
+      data: wechats,
+    });
+
+  }).call(define('Controller'))
 	</script>
 
 
