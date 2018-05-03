@@ -74,7 +74,7 @@
     border-radius: 5px;
     box-shadow: 2px 2px rgba(238,238,238,0.2);
     margin-top:20px" ms-for="el in data">
-    <img ms-attr="{src:'img/wechat/'+el.abbr+'.jpg'}" alt="" width="90%"  >
+    <img ms-attr="{src:el.abbr}" alt="" width="90%"  >
     <p>{{el.name}}</p>
   </div>
 
@@ -91,13 +91,13 @@
 
    var self = this;
    var wechats = [
-     {name:'拉萨', abbr:'cnzx'},
-     {name:'山南', abbr:'cnzx'},
-     {name:'日喀则', abbr:'cnzx'},
-     {name:'林芝', abbr:'cnzx'},
-     {name:'昌都', abbr:'cnzx'},
-     {name:'阿里', abbr:'cnzx'},
-     {name:'那曲', abbr:'cnzx'},
+    //  {name:'拉萨', abbr:'cnzx'},
+    //  {name:'山南', abbr:'cnzx'},
+    //  {name:'日喀则', abbr:'cnzx'},
+     {name:'林芝', abbr:'http://p84xxarlh.bkt.clouddn.com/%E6%9E%97%E8%8A%9D%E5%AE%89%E7%9B%91.jpg'},
+     {name:'昌都', abbr:'http://p84xxarlh.bkt.clouddn.com/%E6%98%8C%E9%83%BD%E5%AE%89%E7%9B%91.jpg'},
+    //  {name:'阿里', abbr:'cnzx'},
+    //  {name:'那曲', abbr:'cnzx'},
     //  {name:'安监机构', abbr:'cnzx'},
     //  {name:'安监机构', abbr:'cnzx'},
     //  {name:'安监机构', abbr:'cnzx'},
