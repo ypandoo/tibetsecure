@@ -57,21 +57,49 @@
     border-left: 2px solid #3296db;
     background: rgba(35, 82, 124, 0.06);
     border-radius: 5px;">
-  友情提示：长按二维码图片，弹出菜单选择识别二维码即可关注相应的公众平台。
+  友情提示：点击下方按钮，长按二维码图片，弹出菜单选择识别二维码即可关注相应的公众平台。
+</div>
+
+<div style="    width: 100%;
+position: absolute;
+top: 0;
+height: 100%;
+left: 0;
+z-index: 2000;
+background-color: #000000a8;" ms-visible="showDialog">
+<div style="    top: 20vh;
+margin: 0 auto;
+text-align: center;
+position: relative;">
+  <img ms-attr="{src:current.abbr}" alt="" width="200px"  >
+  <p style="padding: 20px;
+  color: white;">长按二维码图片，弹出菜单选择识别二维码即可关注相应的公众平台</p>
+  <div style="width: 200px;
+  margin-top: 40px;
+  color: white;
+  background-color: #3296db;
+  border-radius: 5px;
+  margin: 0 auto;
+  height: 40px;
+  line-height: 40px;" ms-click="close()">
+    关闭窗口
+  </div>
+</div>
+
 </div>
 
 
-<div style="overflow:hidden; width:100%">
-  <div style="    width: 31%;
-    margin-left: 1%;
-    margin-right: 1%;
+<div style="overflow:hidden; width:100%; padding:20px">
+  <div style="    width: 48%;
+    margin: 20px 1%;
     float: left;
     text-align: center;
+    height: 40px;
+    line-height: 40px;
     border: 1px solid #eeeeee;
     border-radius: 5px;
-    box-shadow: 2px 2px rgba(238,238,238,0.2);
-    margin-top:20px" ms-for="el in data">
-    <img ms-attr="{src:el.abbr}" alt="" width="90%"  >
+    box-shadow: 2px 2px rgba(238,238,238,0.2);" ms-for="el in data" ms-click="show(el)">
+    <!-- <img ms-attr="{src:el.abbr}" alt="" width="90%"  > -->
     <p>{{el.name}}</p>
   </div>
 
@@ -91,8 +119,8 @@
     //  {name:'拉萨', abbr:'cnzx'},
     //  {name:'山南', abbr:'cnzx'},
     //  {name:'日喀则', abbr:'cnzx'},
-     {name:'林芝', abbr:'http://p84xxarlh.bkt.clouddn.com/%E6%9E%97%E8%8A%9D%E5%AE%89%E7%9B%91.jpg'},
-     {name:'昌都', abbr:'http://p84xxarlh.bkt.clouddn.com/%E6%98%8C%E9%83%BD%E5%AE%89%E7%9B%91.jpg'},
+     {name:'林芝安监', abbr:'http://p84xxarlh.bkt.clouddn.com/%E6%9E%97%E8%8A%9D%E5%AE%89%E7%9B%91.jpg'},
+     {name:'昌都安监', abbr:'http://p84xxarlh.bkt.clouddn.com/%E6%98%8C%E9%83%BD%E5%AE%89%E7%9B%91.jpg'},
     //  {name:'阿里', abbr:'cnzx'},
     //  {name:'那曲', abbr:'cnzx'},
     //  {name:'安监机构', abbr:'cnzx'},
@@ -104,6 +132,15 @@
    self.content = avalon.define({
       $id: "wechat",
       data: wechats,
+      current: wechats[0],
+      showDialog: false,
+      show:function(item){
+        self.content.current = item
+        self.content.showDialog = true
+      },
+      close: function(){
+        self.content.showDialog = false
+      }
     });
 
   }).call(define('Controller'))
